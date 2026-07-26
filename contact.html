@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Buildqual Engineering Limited</title>
+  <meta name="description" content="Contact Buildqual Engineering — request a quote, book a test, or find our Lusaka offices.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <section class="hero text-white">
+    <div class="container-x py-20 text-center">
+      <span class="eyebrow" style="color:#ff7a00">Contact</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Let's talk about your project.</h1>
+      <p class="max-w-2xl mx-auto text-slate-200">Request a quote, ask a technical question, or arrange sampling on site.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-x grid lg:grid-cols-3 gap-10">
+      <div class="lg:col-span-2" id="quote">
+        <h2 class="text-2xl font-bold mb-6">Request a Quote</h2>
+        <!--
+          FORM DELIVERY — Formspree.
+          1. Sign up at https://formspree.io with buildqualengineeringlimited@gmail.com
+          2. Create a new form; copy your endpoint (e.g. https://formspree.io/f/xyzabc12)
+          3. Replace YOUR_FORMSPREE_ID below with the ID after /f/
+          4. Confirm the verification email Formspree sends to the Gmail
+          Until step 3 is done, submissions will fall back to opening the visitor's email client via mailto.
+        -->
+        <form id="contact-form"
+              class="grid gap-4"
+              action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+              method="POST">
+          <div class="grid md:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="text-sm font-medium">Name *</span>
+              <input required name="name" type="text" class="mt-1 w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff7a00]">
+            </label>
+            <label class="block">
+              <span class="text-sm font-medium">Company</span>
+              <input name="company" type="text" class="mt-1 w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff7a00]">
+            </label>
+          </div>
+          <div class="grid md:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="text-sm font-medium">Email *</span>
+              <input required name="email" type="email" class="mt-1 w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff7a00]">
+            </label>
+            <label class="block">
+              <span class="text-sm font-medium">Phone</span>
+              <input name="phone" type="tel" class="mt-1 w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff7a00]">
+            </label>
+          </div>
+          <label class="block">
+            <span class="text-sm font-medium">Service of Interest</span>
+            <select name="service" class="mt-1 w-full px-4 py-3 border border-slate-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-[#ff7a00]">
+              <option value="">Select a service…</option>
+              <option>Soils & Gravels Testing</option>
+              <option>Concrete & Precast Testing</option>
+              <option>Aggregate Testing</option>
+              <option>Geotechnical Investigations</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="block">
+            <span class="text-sm font-medium">Message *</span>
+            <textarea required name="message" rows="5" class="mt-1 w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff7a00]"></textarea>
+          </label>
+          <input type="hidden" name="_subject" value="New quote enquiry — Buildqual website">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_next" value="thanks.html">
+          <div class="flex items-center gap-4">
+            <button type="submit" class="btn-primary">Send Enquiry</button>
+            <span id="form-status" class="text-sm text-slate-500"></span>
+          </div>
+        </form>
+      </div>
+
+      <aside class="grid gap-4 h-fit">
+        <div class="card">
+          <h3 class="font-semibold mb-3">Offices</h3>
+          <p class="text-sm text-slate-600">Off Alick Nkhata Road, Mtendere, Lusaka.<br>Ibex Hill, Plot No. 28, Lusaka.<br>Lusaka Province, Zambia.</p>
+        </div>
+        <div class="card">
+          <h3 class="font-semibold mb-3">Reach us</h3>
+          <ul class="text-sm text-slate-600 space-y-1">
+            <li>Tel/Fax: <a href="tel:+260212226123" class="text-[#0a2540] font-medium">+260 212 226 123</a></li>
+            <li>Mobile: <a href="tel:+260962920940" class="text-[#0a2540] font-medium">+260 962 920 940</a></li>
+            <li>Mobile: <a href="tel:+260970037472" class="text-[#0a2540] font-medium">+260 970 037 472</a></li>
+            <li>WhatsApp: <a href="https://wa.me/260968823050" class="text-[#0a2540] font-medium">+260 968 823 050</a></li>
+            <li>Email: <a href="mailto:buildqualengineeringlimited@gmail.com" class="text-[#0a2540] font-medium break-all">buildqualengineeringlimited@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 class="font-semibold mb-3">Company</h3>
+          <p class="text-sm text-slate-600">TPIN: 2003721325<br>Facebook: Buildqual Engineering Limited</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="bg-[#f4f7fb]">
+    <div class="container-x py-6">
+      <div class="rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+        <iframe
+          title="Buildqual Engineering — Lusaka"
+          src="https://www.google.com/maps?q=Alick+Nkhata+Road,+Mtendere,+Lusaka&output=embed"
+          width="100%" height="380" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

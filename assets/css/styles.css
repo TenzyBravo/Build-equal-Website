@@ -1,0 +1,139 @@
+/* Buildqual Engineering — custom styles on top of Tailwind */
+
+:root {
+  --navy: #0a2540;
+  --navy-2: #12395c;
+  --orange: #ff7a00;
+  --orange-2: #e56d00;
+  --bg: #f4f7fb;
+  --text: #1a2332;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: #fff;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', 'Inter', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: #fff;
+  padding: 0.75rem 1.4rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: background .15s ease, transform .15s ease;
+}
+.btn-primary:hover { background: var(--orange-2); }
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 0.65rem 1.3rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: background .15s ease, color .15s ease;
+}
+.btn-outline:hover { background: #fff; color: var(--navy); }
+
+.btn-ghost {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+  padding: 0.65rem 1.3rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: background .15s ease, color .15s ease;
+}
+.btn-ghost:hover { background: var(--navy); color: #fff; }
+
+/* Hero background — subtle industrial gradient with SVG grid overlay */
+.hero {
+  background:
+    linear-gradient(135deg, rgba(10,37,64,0.92) 0%, rgba(18,57,92,0.88) 100%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60'><path d='M60 0H0v60' fill='none' stroke='%23ffffff' stroke-opacity='0.08' stroke-width='1'/></svg>");
+  background-size: cover, 60px 60px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5ecf3;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px rgba(10,37,64,0.04);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(10,37,64,0.08);
+  border-color: #cfdbe7;
+}
+
+.section { padding: 4rem 0; }
+@media (min-width: 768px) { .section { padding: 5.5rem 0; } }
+
+.container-x { max-width: 1180px; margin-inline: auto; padding-inline: 1.25rem; }
+
+.eyebrow {
+  display: inline-block;
+  color: var(--orange);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  margin-bottom: 0.6rem;
+}
+
+.stat-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--orange);
+  line-height: 1;
+}
+
+/* Nav */
+.nav-link { color: #e6eef7; font-weight: 500; }
+.nav-link:hover { color: #fff; }
+.nav-link.active { color: var(--orange); }
+
+/* Floating WhatsApp */
+.wa-fab {
+  position: fixed; right: 1rem; bottom: 1rem; z-index: 60;
+  background: #25D366; color: #fff; border-radius: 999px;
+  width: 56px; height: 56px; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 22px rgba(37,211,102,0.4);
+  transition: transform .15s ease;
+}
+.wa-fab:hover { transform: scale(1.05); }
+
+/* Table */
+.tests-table th {
+  background: var(--navy); color: #fff; text-align: left; padding: 0.9rem 1rem;
+  font-weight: 600; font-size: 0.9rem;
+}
+.tests-table td { padding: 0.8rem 1rem; border-bottom: 1px solid #e5ecf3; font-size: 0.92rem; }
+.tests-table tr:nth-child(even) td { background: #fafcfe; }
+.tests-table tr:hover td { background: #f0f5fa; }
+
+/* Placeholder image tile */
+.ph {
+  background:
+    repeating-linear-gradient(45deg, #e9eef5 0 10px, #dfe6ef 10px 20px);
+  color: #5b6b7d;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 0.75rem; padding: 1rem; text-align: center;
+  font-size: 0.85rem; font-weight: 500;
+  min-height: 180px;
+}
+
+/* Mobile nav */
+#mobile-menu { display: none; }
+#mobile-menu.open { display: block; }
